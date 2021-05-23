@@ -3,7 +3,7 @@ export const LOGIN_USER = 'LOGIN_USER';
 export const LOGOUT_USER = 'LOGOUT_USER';
 
 export const LoginAction = (userCreds) => dispatch => {
-    fetch('http://localhost:2500/user/login', {
+    fetch('https://talkmind-backend.herokuapp.com/user/login', {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(userCreds)
