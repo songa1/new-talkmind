@@ -1,7 +1,7 @@
 export const NEW_USER = 'NEW_USER';
 
 export const RegisterAction = (user) => dispatch => {
-    fetch('http://localhost:2500/user/register', {
+    fetch('https://talkmind-backend.herokuapp.com/user/register', {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(user)
