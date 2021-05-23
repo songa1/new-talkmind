@@ -6,7 +6,7 @@ export const DELETE_POST = 'DELETE_POST';
 
 export const fetchPosts = () => dispatch => {
     
-        fetch('http://localhost:2500/posts/all')
+        fetch('https://talkmind-backend.herokuapp.com/posts/all')
             .then(res => res.json())
             .then(data => dispatch({
                 type: 'FETCH_POSTS',
@@ -16,7 +16,7 @@ export const fetchPosts = () => dispatch => {
 }
 
 export const addPost = (postData) => dispatch => {
-    fetch('http://localhost:2500/posts/new', {
+    fetch('https://talkmind-backend.herokuapp.com/posts/new', {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(postData)
@@ -29,7 +29,7 @@ export const addPost = (postData) => dispatch => {
 }
 
 export const DeletePost = (id) => dispatch => {
-    fetch('http://localhost:2500/posts/all/'+id, {
+    fetch('https://talkmind-backend.herokuapp.com/posts/all/'+id, {
             method: 'DELETE',
     }).then(()=>dispatch({
         type: 'DELETE_POST'
